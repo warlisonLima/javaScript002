@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warlison</title>
+</head>
+
+<body>
+    <main>
+        <h1>Trabalhando com Cores</h1>
+<div id="caixa">
+    <label for="clima">Qual a sua cor Favorita</label>
+
+    <select id="clima">
+        <option value="">--Escolha uma Cor--</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+        <option value="vermelho">Vermelho</option>
+        <option value="rosa">Rosa</option>
+        <option value="preto">Preto</option>
+        <option value="branco">Branco</option>
+    </select>
+</div>
+        <p></p>
+    </main>
+
+   
+
+    <script>
+        const select = document.querySelector('select');
+        const para =  document.querySelector('p');
+        select.onchange = setClima;
+
+        function setClima() {
+            const escolha = select.value;
+            switch (escolha) {
+                case 'azul':
+                    para.textContent = 'Sua Cor favorita é Azul'
+                    break;
+                case 'verde':
+                    para.textContent = 'Sua Cor favorita é Verde'
+                    break;
+                case 'vermelho':
+                    para.textContent = 'Sua Cor favorita é Vermelho'
+                    break;
+                case 'rosa':
+                    para.textContent = 'Sua Cor favorita é Rosa'
+                    break;
+                case 'preto':
+                    para.textContent = 'Sua Cor favorita é Preto'
+                break;
+                case 'Branco':
+                    para.textContent = 'Sua Cor favorita é Branco'
+                break;
+               
+            }
+
+        }
+
+
+    </script>
+    <style>
+        *{margin: 0;padding: 0;}
+        body {
+            background-color: rgba(0, 0, 0, 0.16);
+        }
+
+        h1 {
+            font-size: 2em;
+            color: white;
+            text-align: center;
+
+        }
+
+        main {
+            display: block;
+            width: 800px;
+            height: 200px;
+            margin: auto; padding: 50px;
+            background-color: rgba(121, 61, 61, 0.59);
+        }
+
+        #clima {
+            width: 200px;
+            height: 30px;
+        }
+        p {
+           text-align: center;
+            color: wheat;
+            font-size: 1.5em;
+            margin: 50px;
+        }
+
+
+    </style>
+
+</body>
+
+</html>
